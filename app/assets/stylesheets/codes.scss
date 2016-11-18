@@ -1,3 +1,29 @@
 // Place all the styles related to the codes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+  margin:0px;
+  padding:0px;
+}
+
+#open_img_upload{
+  font-size: 60px;
+  margin-top:30px;
+}
+
+#result_div{
+  width:100%;
+  border:2px solid green;
+  border-left:none;
+  border-right:none;
+  display:none;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#down_arrow{
+  font-size: 30px;
+  margin-top: 20px;
+  display:none;
+}

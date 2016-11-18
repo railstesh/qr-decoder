@@ -2,26 +2,47 @@
 <html>
 <head>
   <title>Qrcode</title>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
-  <input type="file" accept="image/*" id="fiad" capture="camera">   
-  <img src="" width="200" style="display:none;" />  
+  <center>
+    <h1>QR Code Decoder</h1>
+    <i class="fa fa-camera" id="open_img_upload" aria-hidden="true"></i>
+    <input type="file" accept="image/*" id="my_image" capture="camera" style="display:none;"><br>
+    <i class="fa fa-long-arrow-down" id="down_arrow" aria-hidden="true"></i>
+  </center>
+
+  <div id='result_div'>
+    <h2 id='result'></h2>
+  </div>
+
 </body>
 
 <script type="text/javascript">  
+  $('#open_img_upload').click(function(){ $('#my_image').trigger('click'); });
+
   $(function(){
-    $('#fiad').change( function(event) {
+    $('#my_image').change( function(event) {
       var tmppath = URL.createObjectURL(event.target.files[0]);
-      $("img").fadeIn("fast").attr('src',tmppath);
        my_function(tmppath);  
     });
-  });  
+  });
 
   function my_function(data_path) {
     QCodeDecoder().decodeFromImage(data_path, function(er,res){
-      console.log(res);
-      alert(res);
+      $("#down_arrow").css('display','block');
+      $("#result_div").css('display','block');
+      if (typeof res == "undefined" ) {
+        $('#result').html('error in code please try again !!!');
+        $('#result').css('color','red');
+        $('#result_div').css('border-top','2px solid red');   
+        $('#result_div').css('border-bottom','2px solid red');   
+      }
+      else{
+        $('#result').html(res);
+        $('#result').css('color','green');          
+      }
     });
   }
 </script>
