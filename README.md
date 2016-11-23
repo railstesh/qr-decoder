@@ -1,26 +1,20 @@
 
-# qr-decoder
+# QR image decoder
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+#### QR code scan over browser that will work on mobile
 
-* Ruby version
+#### A web page that will be able to scan qr code using browser on mobile
 
-* System dependencies
+#### will be able to select camera. front facing camera or back camera
 
-* Configuration
+Demo://qrcodescanner.herokuapp.com
 
-* Database creation
+Steps:
+* Please open the above URL on mobile iphone / ipad / android etc..
+* Please click on the camera icon, once you are on the application (you will see it)
+* Now please scan any QR code image and done it 
+* You will see QR code on the screen
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
+Stack: With Ruby, Rails, HTML and javascript
