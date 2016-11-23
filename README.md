@@ -8,7 +8,7 @@
 
 #### will be able to select camera. front facing camera or back camera
 
-Demo://qrcodescanner.herokuapp.com
+Demo: https://qrcodescanner.herokuapp.com/
 
 Steps:
 * Please open the above URL on mobile iphone / ipad / android etc..
